@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="uvbot_description">
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <parent link="base_footprint"/>
+      <child link="base_link" />
+  </joint>
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0014525 0.56737 6.4449E-05"
+        rpy="0 0 0" />
+      <mass
+        value="31.965" />
+      <inertia
+        ixx="1.7824"
+        ixy="0.14503"
+        ixz="-0.000125"
+        iyy="0.94758"
+        iyz="0.00039597"
+        izz="1.7393" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.9451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="leftwheel_link">
+    <inertial>
+      <origin
+        xyz="0.084316 2.8932E-14 3.1058E-14"
+        rpy="0 0 0" />
+      <mass
+        value="1.419" />
+      <inertia
+        ixx="0.0047399"
+        ixy="6.1781E-16"
+        ixz="6.6222E-16"
+        iyy="0.0029413"
+        iyz="2.3991E-19"
+        izz="0.0029413" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/leftwheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.87451 0.9451 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/leftwheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="leftwheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.139 0.040492"
+      rpy="0.75043 -0.000515 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="leftwheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="rightwheel_link">
+    <inertial>
+      <origin
+        xyz="0.084319 1.1765E-12 1.6243E-12"
+        rpy="0 0 0" />
+      <mass
+        value="1.419" />
+      <inertia
+        ixx="0.0047399"
+        ixy="2.5096E-14"
+        ixz="3.4646E-14"
+        iyy="0.0029413"
+        iyz="-2.9359E-19"
+        izz="0.0029413" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/rightwheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.87451 0.9451 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/rightwheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rightwheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.139 0.0405"
+      rpy="0.62684 -1.1814E-05 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="rightwheel_link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="-0.0019832 -0.00026636 0.017782"
+        rpy="0 0 0" />
+      <mass
+        value="0.26216" />
+      <inertia
+        ixx="0.00013119"
+        ixy="1.7388E-06"
+        ixz="8.0066E-07"
+        iyy="0.00012709"
+        iyz="2.3502E-07"
+        izz="0.00022895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="0.2575 0.00039903 0.145"
+      rpy="0.00052311 0 -0.0058451" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="realsense_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/realsense_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/realsense_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="realsense_joint"
+    type="fixed">
+    <origin
+      xyz="0.29721 0.00024774 0.090317"
+      rpy="1.0472 0.0010462 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="realsense_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
