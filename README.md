@@ -10,12 +10,15 @@ Officially only linux operating systems with ROS kinetic are supported.
 AprilRobotics/apriltag, the installation steps can be referred to, https://github.com/AprilRobotics/apriltag
 <br>
 # Install
-'''
-mkdir -p ~/catkin_ws/src                # Make a new workspace 
-cd ~/catkin_ws/src                      # Navigate to the source space
-git clone https://github.com/zhonghang1187151422/uvbot.git      # Clone uvbot library
-cd ~/catkin_ws                          # Navigate to the workspace
-rosdep install --from-paths src --ignore-src -r -y  # Install any missing packages
-catkin_make                             # Build all packages
-
-'''
+`mkdir -p ~/catkin_ws/src                # Make a new workspace `
+<br>
+`cd ~/catkin_ws/src                      # Navigate to the source space `
+<br>
+`git clone https://github.com/zhonghang1187151422/uvbot.git      # Clone uvbot library `
+<br>
+`cd ~/catkin_ws                          # Navigate to the workspace `
+<br>
+`rosdep install --from-paths src --ignore-src -r -y  # Install any missing packages `
+<br>
+`catkin_make                             # Build all packages `
+<br>
