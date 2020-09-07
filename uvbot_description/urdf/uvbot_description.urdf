@@ -63,10 +63,10 @@
         value="1.419" />
       <inertia
         ixx="0.0047399"
-        ixy="6.1781E-16"
-        ixz="6.6222E-16"
+        ixy="6.1775E-16"
+        ixz="6.622E-16"
         iyy="0.0029413"
-        iyz="2.3991E-19"
+        iyz="-3.0218E-19"
         izz="0.0029413" />
     </inertial>
     <visual>
@@ -110,17 +110,17 @@
     name="rightwheel_link">
     <inertial>
       <origin
-        xyz="0.084319 1.1765E-12 1.6243E-12"
+        xyz="0.084318847943527 1.17654150311175E-12 1.62430485728393E-12"
         rpy="0 0 0" />
       <mass
-        value="1.419" />
+        value="1.41903797649423" />
       <inertia
-        ixx="0.0047399"
-        ixy="2.5096E-14"
-        ixz="3.4646E-14"
-        iyy="0.0029413"
-        iyz="-2.9359E-19"
-        izz="0.0029413" />
+        ixx="0.00473986165421106"
+        ixy="2.50955468050729E-14"
+        ixz="3.46463883080533E-14"
+        iyy="0.00294133306526573"
+        iyz="-1.85173973463775E-19"
+        izz="0.00294133306526572" />
     </inertial>
     <visual>
       <origin
@@ -133,7 +133,7 @@
       <material
         name="">
         <color
-          rgba="0.87451 0.9451 1 1" />
+          rgba="0.874509803921569 0.945098039215686 1 1" />
       </material>
     </visual>
     <collision>
@@ -163,17 +163,17 @@
     name="laser_link">
     <inertial>
       <origin
-        xyz="-0.0019832 -0.00026636 0.017782"
+        xyz="-0.00198321102598309 -0.000266359960519131 0.0177816921930511"
         rpy="0 0 0" />
       <mass
-        value="0.26216" />
+        value="0.262164963511652" />
       <inertia
-        ixx="0.00013119"
-        ixy="1.7388E-06"
-        ixz="8.0066E-07"
-        iyy="0.00012709"
-        iyz="2.3502E-07"
-        izz="0.00022895" />
+        ixx="0.000131192479618295"
+        ixy="1.73882883242193E-06"
+        ixz="8.0065502442105E-07"
+        iyy="0.000127087273744833"
+        iyz="2.3502396722334E-07"
+        izz="0.000228948509854508" />
     </inertial>
     <visual>
       <origin
@@ -186,7 +186,7 @@
       <material
         name="">
         <color
-          rgba="0.75294 0.75294 0.75294 1" />
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
     <collision>
@@ -216,6 +216,218 @@
     name="realsense_link">
     <inertial>
       <origin
+        xyz="-0.0128638799459395 1.32760934023645E-05 3.92063790328884E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0449411298420615" />
+      <inertia
+        ixx="2.75024872593895E-05"
+        ixy="-7.61547499427516E-09"
+        ixz="4.25283009834144E-09"
+        iyy="4.02854800903875E-06"
+        iyz="2.33921973962897E-11"
+        izz="2.80703331055142E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/realsense_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0.945098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/realsense_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="realsense_joint"
+    type="fixed">
+    <origin
+      xyz="0.29721 0.00024774 0.090317"
+      rpy="-0.001208 -0.5236 0.00060402" />
+    <parent
+      link="base_link" />
+    <child
+      link="realsense_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar1_link">
+    <inertial>
+      <origin
+        xyz="-0.00543516764948176 -1.38777878078145E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0258112064800094" />
+      <inertia
+        ixx="1.12178459447858E-05"
+        ixy="-6.88214269644119E-22"
+        ixz="5.12438389476601E-22"
+        iyy="2.16402273272855E-06"
+        iyz="2.46711787572769E-21"
+        izz="9.87829862285972E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.874509803921569 0.945098039215686 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sonar1_joint"
+    type="fixed">
+    <origin
+      xyz="0.15797 0.27578 0.034144"
+      rpy="0.00022064 -0.00047429 1.1354" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar1_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar2_link">
+    <inertial>
+      <origin
+        xyz="-0.00543516764948171 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0258112064800093" />
+      <inertia
+        ixx="1.12178459447858E-05"
+        ixy="-1.37642853928824E-20"
+        ixz="6.8924824540981E-22"
+        iyy="2.16402273272854E-06"
+        iyz="-1.35998832461375E-21"
+        izz="9.8782986228597E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.874509803921569 0.945098039215686 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sonar2_joint"
+    type="fixed">
+    <origin
+      xyz="0.29939 0.1086 0.034057"
+      rpy="0.00050515 -0.00013585 0.26271" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar3_link">
+    <inertial>
+      <origin
+        xyz="-0.0054352 -1.3878E-17 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.025811" />
+      <inertia
+        ixx="1.1218E-05"
+        ixy="2.3505E-20"
+        ixz="-2.6646E-22"
+        iyy="2.164E-06"
+        iyz="-1.5068E-21"
+        izz="9.8783E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.87451 0.9451 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://uvbot_description/meshes/sonar3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sonar3_joint"
+    type="fixed">
+    <origin
+      xyz="0.29958 -0.10761 0.033944"
+      rpy="0.0005054 0.00013493 -0.26089" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar3_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar4_link">
+    <inertial>
+      <origin
         xyz="0 0 0"
         rpy="0 0 0" />
       <mass
@@ -234,7 +446,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://uvbot_description/meshes/realsense_link.STL" />
+          filename="package://uvbot_description/meshes/sonar4_link.STL" />
       </geometry>
       <material
         name="">
@@ -248,20 +460,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://uvbot_description/meshes/realsense_link.STL" />
+          filename="package://uvbot_description/meshes/sonar4_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="realsense_joint"
+    name="sonar4_joint"
     type="fixed">
     <origin
-      xyz="0.29721 0.00024774 0.090317"
-      rpy="1.0472 0.0010462 1.5708" />
+      xyz="0.158473613809801 -0.27504791684719 0.0338560706421803"
+      rpy="0.000221499778446617 0.000473886325860837 -1.1335579299033" />
     <parent
       link="base_link" />
     <child
-      link="realsense_link" />
+      link="sonar4_link" />
     <axis
       xyz="0 0 0" />
   </joint>
